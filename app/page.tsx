@@ -15,12 +15,12 @@ type Car = {
 };
 
 const cars: Car[] = [
-  {name:"Mercedes-Benz GLE 400d 4Matic Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm094",year:"2023",km:"18,000 KM",fuel:"Diesel",type:"Luxury",price:"US$115,000",img:"https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1400&q=85"},
-  {name:"Toyota Hilux KingCab",source:"https://www.autotrader.co.zw/cars/for-sale/harare/toyota/aqua/wm022",year:"2021",km:"34,000 KM",fuel:"Diesel",type:"4x4",price:"US$38,000",img:"https://images.unsplash.com/photo-1605893477799-b99e3b8b93fe?auto=format&fit=crop&w=1400&q=85"},
-  {name:"Nissan Caravan Premium GX",source:"https://www.autotrader.co.zw/cars/for-sale/harare/nissan/note/wm077",year:"2017",km:"108,000 KM",fuel:"Diesel",type:"MPV",price:"US$17,900",img:"https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1400&q=85"},
-  {name:"BMW X1 xDrive",source:"https://www.autotrader.co.zw/cars/for-sale/harare/toyota/hilux-gd6/wm057",year:"2017",km:"85,000 KM",fuel:"Diesel",type:"SUV",price:"US$18,800",img:"https://images.unsplash.com/photo-1556189250-72ba954cfc2b?auto=format&fit=crop&w=1400&q=85"},
-  {name:"Toyota Axio",source:"https://www.autotrader.co.zw/cars/for-sale/harare/hino/dutro/wm020",year:"2014",km:"127,000 KM",fuel:"Petrol",type:"Sedan",price:"US$8,400",img:"https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1400&q=85"},
-  {name:"Mercedes-Benz GLE 350d Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm060",year:"2017",km:"120,000 KM",fuel:"Diesel",type:"Luxury",price:"US$37,800",img:"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1400&q=85"}
+  {name:"Mercedes-Benz GLE 400d 4Matic Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm094",year:"2023",km:"18,000 KM",fuel:"Diesel",type:"Luxury",price:"US$115,000",img:"https://imgcdn.getruck.eu/2025/09/07/417230/1.jpg"},
+  {name:"Toyota Hilux KingCab",source:"https://www.autotrader.co.zw/cars/for-sale/harare/toyota/aqua/wm022",year:"2021",km:"34,000 KM",fuel:"Diesel",type:"4x4",price:"US$38,000",img:"https://cdn.ennxo.com/uploads/products/640/042208aa53854925bb2bbc5849ed13e6.jpg"},
+  {name:"Nissan Caravan Premium GX",source:"https://www.autotrader.co.zw/cars/for-sale/harare/nissan/note/wm077",year:"2017",km:"108,000 KM",fuel:"Diesel",type:"MPV",price:"US$17,900",img:"https://dk3znn2inqwxb.cloudfront.net/s_stock/photos/202610350247/202610350247_01_71ec065019edbccece915b7488e06bfd.jpg"},
+  {name:"BMW X1 xDrive",source:"https://www.autotrader.co.zw/cars/for-sale/harare/toyota/hilux-gd6/wm057",year:"2017",km:"85,000 KM",fuel:"Diesel",type:"SUV",price:"US$18,800",img:"https://images.clickdealer.co.uk/vehicles/4513/4513535/large2/102053043.jpg"},
+  {name:"Toyota Axio",source:"https://www.autotrader.co.zw/cars/for-sale/harare/hino/dutro/wm020",year:"2014",km:"127,000 KM",fuel:"Petrol",type:"Sedan",price:"US$8,400",img:"https://www.batfa.com/photo-used-car-toyota-corolla-axio-2014-model-black-color.files/AxioHybrid2014black-front.jpg"},
+  {name:"Mercedes-Benz GLE 350d Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm060",year:"2017",km:"120,000 KM",fuel:"Diesel",type:"Luxury",price:"US$37,800",img:"https://cdn.autowereld.nl/I742157603/640x0/mercedes-benz-gle-klasse-coupe-350-d-4-matic-350-d-4matic.jpg"}
 ];
 
 const heroCars = [
@@ -72,7 +72,7 @@ export default function Home() {
       <div className="links"><a href="#stock">Stock</a><a href="#experience">Experience</a><a href="#sourcing">Sourcing</a><a href="#contact">Contact</a></div>
       <a className="navCta" href="#stock">View Collection</a>
     </div></nav>
-    <div className="demoStrip">DEMO WEBSITE · HISTORICAL VEHICLE LISTINGS · INVENTORY WILL BE UPDATED FOR A LIVE SITE</div>
+    <div className="demoStrip">DEMO WEBSITE · HISTORICAL WAMAMBO LISTINGS · REPRESENTATIVE MODEL PHOTOS · LIVE STOCK WILL REPLACE THESE</div>
 
     <section className="hero" id="top">
       {heroCars.map((item, i) => <button key={item.car.name} className={`heroSlide ${i === slide ? "active" : ""}`} onClick={() => setSelected(item.car)} aria-label={`View ${item.car.name}`}>
@@ -90,14 +90,14 @@ export default function Home() {
         {heroCars.map((item, i) => <button key={item.car.name} className={`heroDot ${i === slide ? "active" : ""}`} onClick={() => setSlide(i)} aria-label={`Show vehicle ${i + 1}`} />)}
         <button className="heroArrow" onClick={() => setSlide((slide + 1) % heroCars.length)} aria-label="Next vehicle">→</button>
       </div>
-      <div className="heroMeta"><div className="container heroMetaInner"><div className="slideCount"><b>{String(slide + 1).padStart(2,"0")}</b> / 04</div><div className="heroNote">Click any vehicle to preview</div></div></div>
+      <div className="heroMeta"><div className="container heroMetaInner"><div className="slideCount"><b>{String(slide + 1).padStart(2,"0")}</b> / 04</div><div className="heroNote">Historical listing · representative model photo</div></div></div>
     </section>
 
     <section className="section" id="stock"><div className="container">
       <div className="sectionHead"><div><div className="kicker">The collection</div><h2>Selected.<br/>Not crowded.</h2></div><p className="sectionIntro">A demonstration collection based on Wamambo Motors ZW vehicle listings published on AutoTrader. These are historical examples and can be replaced with live stock if the dealership proceeds.</p></div>
       <div className="filters">{["All Vehicles","SUV","Luxury","4x4","Under US$60k"].map(f => <button key={f} className={`filter ${filter === f ? "active" : ""}`} onClick={() => setFilter(f)}>{f}</button>)}</div>
       <div className="grid">{visibleCars.map(c=><button className="car" key={c.name} onClick={() => setSelected(c)} aria-label={`View ${c.name}`}>
-        <div className="carImg" style={{backgroundImage:`url('${c.img}')`}}/><div className="carBody"><div className="carTop"><h3>{c.name}</h3><div className="price">{c.price}</div></div><div className="spec"><span>{c.year}</span><span>{c.km}</span><span>{c.fuel}</span></div><span className="view">View vehicle →</span><span className="sourceLink">Original listing →</span></div>
+        <div className="carImg" style={{backgroundImage:`url('${c.img}')`}}/><div className="carBody"><div className="carTop"><h3>{c.name}</h3><div className="price">{c.price}</div></div><div className="spec"><span>{c.year}</span><span>{c.km}</span><span>{c.fuel}</span></div><span className="view">View vehicle →</span><span className="sourceLink">Original Wamambo listing →</span></div>
       </button>)}</div>
     </div>{visibleCars.length === 0 && <div className="emptyState">No vehicles match those criteria. Adjust the filters or <button type="button" onClick={() => {setFilter("All Vehicles");setBudget("Any budget");setBodyType("Any body type");setMake("Any make");}}>reset your search</button>.</div>}</section>
 
