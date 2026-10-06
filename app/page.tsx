@@ -26,8 +26,10 @@ const cars: Car[] = [
 const heroCars = [
   {car: cars[0], eyebrow:"01 / Mercedes-Benz GLE 400d"},
   {car: cars[1], eyebrow:"02 / Toyota Hilux KingCab"},
-  {car: cars[3], eyebrow:"03 / BMW X1 xDrive"},
-  {car: cars[5], eyebrow:"04 / Mercedes-Benz GLE 350d"}
+  {car: cars[2], eyebrow:"03 / Nissan Caravan Premium GX"},
+  {car: cars[4], eyebrow:"04 / Toyota Axio"},
+  {car: cars[3], eyebrow:"05 / BMW X1 xDrive"},
+  {car: cars[5], eyebrow:"06 / Mercedes-Benz GLE 350d"}
 ];
 
 export default function Home() {
@@ -90,7 +92,7 @@ export default function Home() {
         {heroCars.map((item, i) => <button key={item.car.name} className={`heroDot ${i === slide ? "active" : ""}`} onClick={() => setSlide(i)} aria-label={`Show vehicle ${i + 1}`} />)}
         <button className="heroArrow" onClick={() => setSlide((slide + 1) % heroCars.length)} aria-label="Next vehicle">→</button>
       </div>
-      <div className="heroMeta"><div className="container heroMetaInner"><div className="slideCount"><b>{String(slide + 1).padStart(2,"0")}</b> / 04</div><div className="heroNote">Historical listing · representative model photo</div></div></div>
+      <div className="heroMeta"><div className="container heroMetaInner"><div className="slideCount"><b>{String(slide + 1).padStart(2,"0")}</b> / 06</div><div className="heroNote">Historical listing · representative model photo</div></div></div>
     </section>
 
     <section className="section" id="stock"><div className="container">
