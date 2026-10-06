@@ -5,6 +5,7 @@ import { dealerConfig, vehicleWhatsAppUrl } from "../lib/dealer-config";
 
 type Car = {
   name: string;
+  source: string;
   year: string;
   km: string;
   fuel: string;
@@ -14,12 +15,12 @@ type Car = {
 };
 
 const cars: Car[] = [
-  {name:"Mercedes-Benz GLE 400d 4Matic Coupe",year:"2023",km:"18,000 KM",fuel:"Diesel",type:"Luxury",price:"US$115,000",img:"https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1400&q=85"},
-  {name:"Toyota Hilux KingCab",year:"2021",km:"34,000 KM",fuel:"Diesel",type:"4x4",price:"US$38,000",img:"https://images.unsplash.com/photo-1605893477799-b99e3b8b93fe?auto=format&fit=crop&w=1400&q=85"},
-  {name:"Nissan Caravan Premium GX",year:"2017",km:"108,000 KM",fuel:"Diesel",type:"MPV",price:"US$17,900",img:"https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1400&q=85"},
-  {name:"BMW X1 xDrive",year:"2017",km:"85,000 KM",fuel:"Diesel",type:"SUV",price:"US$18,800",img:"https://images.unsplash.com/photo-1556189250-72ba954cfc2b?auto=format&fit=crop&w=1400&q=85"},
-  {name:"Toyota Axio",year:"2014",km:"127,000 KM",fuel:"Petrol",type:"Sedan",price:"US$8,400",img:"https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1400&q=85"},
-  {name:"Mercedes-Benz GLE 350d Coupe",year:"2017",km:"120,000 KM",fuel:"Diesel",type:"Luxury",price:"US$37,800",img:"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1400&q=85"}
+  {name:"Mercedes-Benz GLE 400d 4Matic Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm094",year:"2023",km:"18,000 KM",fuel:"Diesel",type:"Luxury",price:"US$115,000",img:"https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1400&q=85"},
+  {name:"Toyota Hilux KingCab",source:"https://www.autotrader.co.zw/cars/for-sale/harare/toyota/aqua/wm022",year:"2021",km:"34,000 KM",fuel:"Diesel",type:"4x4",price:"US$38,000",img:"https://images.unsplash.com/photo-1605893477799-b99e3b8b93fe?auto=format&fit=crop&w=1400&q=85"},
+  {name:"Nissan Caravan Premium GX",source:"https://www.autotrader.co.zw/cars/for-sale/harare/nissan/caravan/wm",year:"2017",km:"108,000 KM",fuel:"Diesel",type:"MPV",price:"US$17,900",img:"https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1400&q=85"},
+  {name:"BMW X1 xDrive",source:"https://www.autotrader.co.zw/cars/for-sale/harare/bmw/x1/wm",year:"2017",km:"85,000 KM",fuel:"Diesel",type:"SUV",price:"US$18,800",img:"https://images.unsplash.com/photo-1556189250-72ba954cfc2b?auto=format&fit=crop&w=1400&q=85"},
+  {name:"Toyota Axio",source:"https://www.autotrader.co.zw/cars/for-sale/harare/toyota/axio/wm",year:"2014",km:"127,000 KM",fuel:"Petrol",type:"Sedan",price:"US$8,400",img:"https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1400&q=85"},
+  {name:"Mercedes-Benz GLE 350d Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm",year:"2017",km:"120,000 KM",fuel:"Diesel",type:"Luxury",price:"US$37,800",img:"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1400&q=85"}
 ];
 
 const heroCars = [
@@ -96,7 +97,7 @@ export default function Home() {
       <div className="sectionHead"><div><div className="kicker">The collection</div><h2>Selected.<br/>Not crowded.</h2></div><p className="sectionIntro">A demonstration collection based on Wamambo Motors ZW vehicle listings published on AutoTrader. These are historical examples and can be replaced with live stock if the dealership proceeds.</p></div>
       <div className="filters">{["All Vehicles","SUV","Luxury","4x4","Under US$60k"].map(f => <button key={f} className={`filter ${filter === f ? "active" : ""}`} onClick={() => setFilter(f)}>{f}</button>)}</div>
       <div className="grid">{visibleCars.map(c=><button className="car" key={c.name} onClick={() => setSelected(c)} aria-label={`View ${c.name}`}>
-        <div className="carImg" style={{backgroundImage:`url('${c.img}')`}}/><div className="carBody"><div className="carTop"><h3>{c.name}</h3><div className="price">{c.price}</div></div><div className="spec"><span>{c.year}</span><span>{c.km}</span><span>{c.fuel}</span></div><span className="view">View vehicle →</span></div>
+        <div className="carImg" style={{backgroundImage:`url('${c.img}')`}}/><div className="carBody"><div className="carTop"><h3>{c.name}</h3><div className="price">{c.price}</div></div><div className="spec"><span>{c.year}</span><span>{c.km}</span><span>{c.fuel}</span></div><span className="view">View vehicle →</span><span className="sourceLink">Original listing →</span></div>
       </button>)}</div>
     </div>{visibleCars.length === 0 && <div className="emptyState">No vehicles match those criteria. Adjust the filters or <button type="button" onClick={() => {setFilter("All Vehicles");setBudget("Any budget");setBodyType("Any body type");setMake("Any make");}}>reset your search</button>.</div>}</section>
 
@@ -119,7 +120,7 @@ export default function Home() {
     {selected && <div className="modalBackdrop" onClick={() => setSelected(null)}><div className="vehicleModal" onClick={e => e.stopPropagation()}>
       <button className="modalClose" onClick={() => setSelected(null)} aria-label="Close">×</button>
       <div className="modalImage" style={{backgroundImage:`url('${selected.img}')`}} />
-      <div className="modalBody"><div className="kicker">Demo vehicle preview</div><h2>{selected.name}</h2><div className="modalPrice">{selected.price}</div><div className="modalSpecs"><span>{selected.year}</span><span>{selected.km}</span><span>{selected.fuel}</span><span>{selected.type}</span></div><p>Interested in this vehicle? Send an enquiry, request the full specification or book a private viewing.</p><div className="modalActions"><a className="btn btnDark" href={vehicleWhatsAppUrl(selected.name, selected.price)} target="_blank" rel="noreferrer" onClick={() => setSelected(null)}>Enquire on WhatsApp →</a><button className="btn btnOutline" onClick={() => setSelected(null)}>Close preview</button></div></div>
+      <div className="modalBody"><div className="kicker">Historical Wamambo listing</div><h2>{selected.name}</h2><div className="modalPrice">{selected.price}</div><div className="modalSpecs"><span>{selected.year}</span><span>{selected.km}</span><span>{selected.fuel}</span><span>{selected.type}</span></div><p>This vehicle is shown as a historical Wamambo Motors ZW example. The listing is no longer current; live stock would replace it on a production website.</p><a className="btn btnOutline" href={selected.source} target="_blank" rel="noreferrer">View original listing →</a><div className="modalActions"><a className="btn btnDark" href={vehicleWhatsAppUrl(selected.name, selected.price)} target="_blank" rel="noreferrer" onClick={() => setSelected(null)}>Enquire on WhatsApp →</a><button className="btn btnOutline" onClick={() => setSelected(null)}>Close preview</button></div></div>
     </div></div>}
   </main>;
 }
