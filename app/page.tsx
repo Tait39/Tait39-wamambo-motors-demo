@@ -27,7 +27,7 @@ const cars: Car[] = [
 const heroCars = [
   {car: cars[4], eyebrow:"01 / BMW X1 xDrive"},
   {car: cars[1], eyebrow:"02 / Mercedes-Benz GLE 450"},
-  {car: cars[3], eyebrow:"03 / Nissan Caravan Premium GX"}
+  {car: cars[6], eyebrow:"03 / Mercedes-Benz GLE 350d Coupe"}
 ];
 
 export default function Home() {
