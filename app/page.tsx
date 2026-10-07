@@ -20,7 +20,7 @@ const cars: Car[] = [
   {name:"Toyota Hilux KingCab",source:"https://www.autotrader.co.zw/cars/for-sale/harare/toyota/aqua/wm022",year:"2021",km:"34,000 KM",fuel:"Diesel",type:"4x4",price:"US$38,000",img:"https://cdn.ennxo.com/uploads/products/640/042208aa53854925bb2bbc5849ed13e6.jpg"},
   {name:"Nissan Caravan Premium GX",source:"https://www.autotrader.co.zw/cars/for-sale/harare/nissan/note/wm077",year:"2017",km:"108,000 KM",fuel:"Diesel",type:"MPV",price:"US$17,900",img:"https://upload.wikimedia.org/wikipedia/commons/1/14/Nissan_NV350_CARAVAN_PREMIUM_GX_%28E26%29_front.JPG"},
   {name:"BMW X1 xDrive",source:"https://www.autotrader.co.zw/cars/for-sale/harare/toyota/hilux-gd6/wm057",year:"2017",km:"85,000 KM",fuel:"Diesel",type:"SUV",price:"US$18,800",img:"https://images.clickdealer.co.uk/vehicles/4513/4513535/large2/102053043.jpg"},
-  {name:"Toyota Axio",source:"https://www.autotrader.co.zw/cars/for-sale/harare/hino/dutro/wm020",year:"2014",km:"127,000 KM",fuel:"Petrol",type:"Sedan",price:"US$8,400",img:"https://upload.wikimedia.org/wikipedia/commons/6/68/Toyota_COROLLA_Axio_HYBRID_G_%28E165%29_front.JPG"},
+  {name:"Toyota Axio",source:"https://www.autotrader.co.zw/cars/for-sale/harare/hino/dutro/wm020",year:"2014",km:"127,000 KM",fuel:"Petrol",type:"Sedan",price:"US$8,400",img:"https://app.autofortrade.com/catalog/products/TOYOTA-AXIO-2896.jpg?height=900&width=1200"},
   {name:"Mercedes-Benz GLE 350d Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm060",year:"2017",km:"120,000 KM",fuel:"Diesel",type:"Luxury",price:"US$37,800",img:"https://upload.wikimedia.org/wikipedia/commons/5/5c/Mercedes_Benz_GLE_350d_Coupe_2016_%2842027117215%29.jpg"}
 ];
 
