@@ -15,13 +15,13 @@ type Car = {
 };
 
 const cars: Car[] = [
-  {name:"Mercedes-Benz GLE 400d 4Matic Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm094",year:"2023",km:"18,000 KM",fuel:"Diesel",type:"Luxury",price:"US$115,000",img:"/images/mercedes-gle-400d.svg"},
+  {name:"Mercedes-Benz GLE 400d 4Matic Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm094",year:"2023",km:"18,000 KM",fuel:"Diesel",type:"Luxury",price:"US$115,000",img:"https://upload.wikimedia.org/wikipedia/commons/d/df/2023_Mercedes-Benz_GLE_400d_3.0_front.jpg"},
   {name:"Mercedes-Benz GLE 450",source:"",year:"2024",km:"32,000 KM",fuel:"Petrol",type:"Luxury",price:"US$89,500",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz%20GLE%20450%204MATIC%20AMG%20Line%20W167%20Black%20%284%29.jpg"},
   {name:"Toyota Hilux KingCab",source:"https://www.autotrader.co.zw/cars/for-sale/harare/toyota/aqua/wm022",year:"2021",km:"34,000 KM",fuel:"Diesel",type:"4x4",price:"US$38,000",img:"https://cdn.ennxo.com/uploads/products/640/042208aa53854925bb2bbc5849ed13e6.jpg"},
   {name:"Nissan Caravan Premium GX",source:"https://www.autotrader.co.zw/cars/for-sale/harare/nissan/note/wm077",year:"2017",km:"108,000 KM",fuel:"Diesel",type:"MPV",price:"US$17,900",img:"https://sbimotor.com/uploads/car/images/963494/06661486_01.jpg"},
   {name:"BMW X1 xDrive",source:"https://www.autotrader.co.zw/cars/for-sale/harare/toyota/hilux-gd6/wm057",year:"2017",km:"85,000 KM",fuel:"Diesel",type:"SUV",price:"US$18,800",img:"https://images.clickdealer.co.uk/vehicles/4513/4513535/large2/102053043.jpg"},
   {name:"Toyota Axio",source:"https://www.autotrader.co.zw/cars/for-sale/harare/hino/dutro/wm020",year:"2014",km:"127,000 KM",fuel:"Petrol",type:"Sedan",price:"US$8,400",img:"https://picture1.goo-net.com/070/0704274/J/0704274A30231031W00107.jpg"},
-  {name:"Mercedes-Benz GLE 350d Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm060",year:"2017",km:"120,000 KM",fuel:"Diesel",type:"Luxury",price:"US$37,800",img:"/images/mercedes-gle-350d.svg"}
+  {name:"Mercedes-Benz GLE 350d Coupe",source:"https://www.autotrader.co.zw/cars/for-sale/harare/mercedes-benz/gle/wm060",year:"2017",km:"120,000 KM",fuel:"Diesel",type:"Luxury",price:"US$37,800",img:"https://upload.wikimedia.org/wikipedia/commons/5/5c/Mercedes_Benz_GLE_350d_Coupe_2016_%2842027117215%29.jpg"}
 ];
 
 const heroCars = [
