@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Mercedes-Benz GLE 400d 4Matic Coupe</title><desc id="desc">Local representative vehicle artwork for the Mercedes-Benz GLE 400d 4Matic Coupe.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#222"/><stop offset=".55" stop-color="#777"/><stop offset="1" stop-color="#171717"/></linearGradient>
+ <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e8e8e8"/><stop offset=".55" stop-color="#9b9b9b"/><stop offset="1" stop-color="#444"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1e2730"/><stop offset="1" stop-color="#60707b"/></linearGradient>
+ <filter id="shadow"><feGaussianBlur stdDeviation="22"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<ellipse cx="830" cy="690" rx="560" ry="90" fill="#000" opacity=".55" filter="url(#shadow)"/>
+<path d="M260 610 Q320 490 500 430 L690 330 Q790 275 965 300 L1135 335 Q1235 355 1320 465 L1390 555 Q1420 600 1380 642 L1305 660 L1250 575 L430 575 L375 655 L285 650 Q240 638 260 610Z" fill="url(#body)" stroke="#d9d9d9" stroke-width="7"/>
+<path d="M610 420 L700 352 Q790 305 950 322 L1110 352 L1195 445 L620 445Z" fill="url(#glass)" stroke="#c5c5c5" stroke-width="5"/>
+<path d="M760 354 L770 444 M950 323 L952 445" stroke="#c5c5c5" stroke-width="5" opacity=".7"/>
+<path d="M1150 450 L1280 480 L1332 540 L1210 535Z" fill="#202428"/>
+<path d="M280 550 Q470 510 1210 535" stroke="#fff" stroke-width="6" opacity=".35"/>
+<rect x="1240" y="548" width="110" height="35" rx="10" fill="#111"/>
+<path d="M1280 558 l18 9 -18 9 -18-9z" fill="#eee"/>
+<circle cx="465" cy="630" r="105" fill="#111" stroke="#aaa" stroke-width="9"/><circle cx="465" cy="630" r="55" fill="#555"/><circle cx="465" cy="630" r="18" fill="#ddd"/>
+<circle cx="1190" cy="630" r="105" fill="#111" stroke="#aaa" stroke-width="9"/><circle cx="1190" cy="630" r="55" fill="#555"/><circle cx="1190" cy="630" r="18" fill="#ddd"/>
+<path d="M1320 515 Q1365 535 1380 570" stroke="#fff" stroke-width="10" opacity=".8"/>
+<text x="800" y="785" text-anchor="middle" fill="#fff" opacity=".9" font-family="Arial,sans-serif" font-size="34" letter-spacing="7">GLE 400d 4MATIC COUPE</text>
+</svg>
